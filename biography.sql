@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 14, 2025 lúc 06:46 PM
+-- Thời gian đã tạo: Th8 16, 2025 lúc 01:43 PM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.0.30
 
@@ -185,6 +185,7 @@ CREATE TABLE `visits` (
   `visit_id` int(11) NOT NULL,
   `visit_time` datetime DEFAULT current_timestamp(),
   `ip_address` varchar(45) DEFAULT NULL,
+  `session_id` varchar(255) NOT NULL,
   `page_url` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -277,7 +278,8 @@ ALTER TABLE `research`
 -- Chỉ mục cho bảng `visits`
 --
 ALTER TABLE `visits`
-  ADD PRIMARY KEY (`visit_id`);
+  ADD PRIMARY KEY (`visit_id`),
+  ADD UNIQUE KEY `session_id` (`session_id`);
 
 --
 -- Chỉ mục cho bảng `works`
