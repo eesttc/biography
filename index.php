@@ -14,7 +14,7 @@
   // Include the header file for common HTML structure
   require_once '../biography/includes/header.php';
 
-  require_once '../biography/public/assets/css/style.css';
+  require_once '../biography/public/assets/css/style.php';
   ?>
 
   <?php
