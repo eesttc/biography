@@ -17,6 +17,74 @@
   require_once '../biography/public/assets/css/style.php';
   ?>
 
+  <div class="biography-content">
+    <h1 class="header-title-index"><a href="../biography/includes/biography.php">Biography</a></h1>
+    <div class="biography-images-container">
+      <div class="index-images">
+        <a href="../biography/includes/biography.php">
+          <img src="./public/assets/images/logo-header.jpg" alt="">
+        </a>
+      </div>
+      <div class="index-images">
+        <a href="../biography/includes/biography.php">
+          <img src="" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="biography-content">
+  <h1 class="header-title-index"><a href="../biography/includes/selectedWorks.php">Selected Works</a></h1>
+    <div class="biography-images-container">
+      <div class="index-images">
+        <a href="../biography/includes/selectedWorks.php">
+          <img src="" alt="">
+        </a>
+      </div>
+      <div class="index-images">
+        <a href="../biography/includes/selectedWorks.php">
+          <img src="" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="biography-content">
+  <h1 class="header-title-index"><a href="../biography/includes/research.php">Research</a></h1>
+    <div class="biography-images-container">
+      <div class="index-images">
+        <img src="" alt="">
+      </div>
+      <div class="index-images">
+        <img src="" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="biography-content">
+  <h1 class="header-title-index"><a href="../biography/includes/awardsAndHonors.php">Awards and Honors</a></h1>
+    <div class="biography-images-container">
+      <div class="index-images">
+        <img src="" alt="">
+      </div>
+      <div class="index-images">
+        <img src="" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="biography-content">
+  <h1 class="header-title-index"><a href="../biography/includes/references.php">References</a></h1>
+    <div class="biography-images-container">
+      <div class="index-images">
+        <img src="" alt="">
+      </div>
+      <div class="index-images">
+        <img src="" alt="">
+      </div>
+    </div>
+  </div>
+
   <?php
   // Close the database connection if needed
   $conn->close();

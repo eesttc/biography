@@ -8,16 +8,7 @@
 </head>
 <body>
   <div class="header">
-    <ul>
-      <li>
-        <a href="../biography/index.php">
-          <img src="/biography/public/assets/images/logo-header.jpg" alt="Logo" class="header-logo">
-        </a>
-      </li>
-      <li>
-        <input type="input" placeholder="Search..." class="header-search"><i class="bi bi-search" style="color: black;"></i>
-      </li>
-    </ul>
+  
   </div>
 </body>
 </html>
