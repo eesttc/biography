@@ -27,7 +27,7 @@
       </div>
       <div class="index-images">
         <a href="../biography/includes/biography.php">
-          <img src="" alt="">
+          <img src="./public/assets/images/logo-header.jpg" alt="">
         </a>
       </div>
     </div>
@@ -38,12 +38,12 @@
     <div class="biography-images-container">
       <div class="index-images">
         <a href="../biography/includes/selectedWorks.php">
-          <img src="" alt="">
+          <img src="./public/assets/images/logo-header.jpg" alt="">
         </a>
       </div>
       <div class="index-images">
         <a href="../biography/includes/selectedWorks.php">
-          <img src="" alt="">
+          <img src="./public/assets/images/logo-header.jpg" alt="">
         </a>
       </div>
     </div>
@@ -53,10 +53,14 @@
   <h1 class="header-title-index"><a href="../biography/includes/research.php">Research</a></h1>
     <div class="biography-images-container">
       <div class="index-images">
-        <img src="" alt="">
+        <a href="../biography/includes/research.php">
+          <img src="./public/assets/images/logo-header.jpg" alt="">
+        </a>
       </div>
       <div class="index-images">
-        <img src="" alt="">
+        <a href="../biography/includes/research.php">
+          <img src="./public/assets/images/logo-header.jpg" alt="">
+        </a>
       </div>
     </div>
   </div>
@@ -65,28 +69,36 @@
   <h1 class="header-title-index"><a href="../biography/includes/awardsAndHonors.php">Awards and Honors</a></h1>
     <div class="biography-images-container">
       <div class="index-images">
-        <img src="" alt="">
+        <a href="../biography/includes/awardsAndHonors.php">
+          <img src="./public/assets/images/logo-header.jpg" alt="">
+        </a>
       </div>
       <div class="index-images">
-        <img src="" alt="">
+        <a href="../biography/includes/awardsAndHonors.php">
+          <img src="./public/assets/images/logo-header.jpg" alt="">
+        </a>
       </div>
     </div>
   </div>
 
-  <div class="biography-content">
+  <div class="biography-content last-content-container">
   <h1 class="header-title-index"><a href="../biography/includes/references.php">References</a></h1>
     <div class="biography-images-container">
       <div class="index-images">
-        <img src="" alt="">
+        <a href="../biography/includes/references.php">
+          <img src="./public/assets/images/logo-header.jpg" alt="">
+        </a>
       </div>
       <div class="index-images">
-        <img src="" alt="">
+        <a href="../biography/includes/references.php">
+          <img src="./public/assets/images/logo-header.jpg" alt="">
+        </a>
       </div>
     </div>
   </div>
 
   <?php
-  // Close the database connection if needed
+  require '../biography/includes/footer.php';
   $conn->close();
   ?>
 </body>
