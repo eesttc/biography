@@ -1,9 +1,13 @@
 <style>
+  /* general */
   body{
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-color: turquoise;
+  }
+  hr {
+    
   }
   /* header style */
   .header { 
@@ -13,17 +17,18 @@
   }
   
   .biography-content {
-    margin-top: 10vh;
+    margin: 20vh 0 20vh 0;
   }
   .header-title-index {
     text-align: center;
+    margin-bottom: 6vh;
   }
   .header-title-index a {
     text-decoration: none;
     color: black;
   }
 
-  /* header image */
+  /* index style */
   .biography-images-container {
     display: flex;
     justify-content: center;
@@ -32,7 +37,7 @@
   }
   .index-images {
     background-color: blue;
-    margin: 10px 8px 10px 8px;
+    margin: 4vh 8vh 0vh 8vh;
     width: 30vh;
     height: 30vh;
     border-radius: 20px;

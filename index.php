@@ -19,6 +19,9 @@
 
   <div class="biography-content">
     <h1 class="header-title-index"><a href="../biography/includes/biography.php">Biography</a></h1>
+    <p>
+
+    </p>
     <div class="biography-images-container">
       <div class="index-images">
         <a href="../biography/includes/biography.php">
@@ -32,9 +35,12 @@
       </div>
     </div>
   </div>
-
+  <hr>
   <div class="biography-content">
   <h1 class="header-title-index"><a href="../biography/includes/selectedWorks.php">Selected Works</a></h1>
+  <p>
+    
+  </p>
     <div class="biography-images-container">
       <div class="index-images">
         <a href="../biography/includes/selectedWorks.php">
@@ -51,6 +57,9 @@
 
   <div class="biography-content">
   <h1 class="header-title-index"><a href="../biography/includes/research.php">Research</a></h1>
+  <p>
+    
+  </p>
     <div class="biography-images-container">
       <div class="index-images">
         <a href="../biography/includes/research.php">
@@ -67,6 +76,9 @@
 
   <div class="biography-content">
   <h1 class="header-title-index"><a href="../biography/includes/awardsAndHonors.php">Awards and Honors</a></h1>
+  <p>
+    
+  </p>
     <div class="biography-images-container">
       <div class="index-images">
         <a href="../biography/includes/awardsAndHonors.php">
@@ -83,6 +95,9 @@
 
   <div class="biography-content last-content-container">
   <h1 class="header-title-index"><a href="../biography/includes/references.php">References</a></h1>
+  <p>
+    
+  </p>
     <div class="biography-images-container">
       <div class="index-images">
         <a href="../biography/includes/references.php">
