@@ -3,8 +3,11 @@
   body{
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: turquoise;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    font-style: italic;
+    background-image: url("./public/assets/images/background-image.jpg");
+    background-size: auto;
   }
   hr {
     
@@ -25,7 +28,7 @@
   }
   .header-title-index a {
     text-decoration: none;
-    color: black;
+    color: white
   }
 
   /* index style */
