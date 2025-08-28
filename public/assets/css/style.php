@@ -13,11 +13,162 @@
     
   }
   /* header style */
-  .header { 
-    background-color: brown;
-    width: auto;
-    height: 20vh;
-  }
+  header {      
+        background-color: #66CDAA;
+        margin-bottom: 50px;
+        width: auto;
+        height: auto;
+    }
+    header .header-container1 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    .logo-header a {
+        margin-left: 20%;
+    }
+    .logo-header a, .logo-header a img {
+        width: 54%;
+    }
+    .header-container1 ul {
+        display: flex;
+        list-style-type: none;
+        width: 100%;
+        height: auto;
+        margin-right: 0%;
+        margin-left: 5%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header-container1 ul li {
+        margin: 0;
+    }
+    #search-header {
+        list-style: none;
+        width: 40%;
+        margin: 0px 0px 0px 0px;
+    }
+    .search-container {
+        position: relative;
+        display: flex;
+
+        width: 60%;
+    }
+    .search {
+        padding-left: 2.5rem;
+        height: 38px;
+        border: 1px solid #ced4da;
+        border-radius: 4px 0 0 4px;
+        width: 100%;
+        font-size: 16px;
+    }
+    .search-button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        height: 38px;
+        padding: 0 10px;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .search-button:hover {
+        background-color: #218838;
+    }
+    .bi-search {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: black;
+        pointer-events: none;
+    }
+    .bi-cart3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        filter: brightness(0.7);
+    }
+    header .header-container1 ul li img {
+        display: block;
+        max-height: 100px;
+        width: auto;
+        margin: 0 5px 0 20px;
+        padding: 0;
+    }
+    .header-container1 li a {
+        text-decoration: none;
+        color: rgb(22, 52, 32);
+    }
+    .header-container1 li a:hover {
+        text-decoration: underline;
+    }
+
+    /* Header container 2 */
+    header .header-container2 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+    .header-container2 ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-container2 ul li {
+        cursor: default;
+        position: relative;
+        font-size: 16px;
+        color: rgb(22, 52, 32);
+        font-size: 19px;
+        margin: 3.5px;
+        padding: 15px 15px;
+        border-radius: 5%;
+    }
+    .header-container2 ul li:hover {
+        background-color: rgb(66, 128, 107);
+        color: rgb(9, 26, 34);
+    }
+    .header-container2 ul a {
+        text-decoration: none;
+        color: rgb(22, 52, 32);
+    }
+    .header-container2 .brand .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #66CDAA;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        width: 200px;
+        z-index: 1000;
+        cursor: pointer;
+    }
+    .header-container2 .brand .submenu li {
+        font-size: 15px;
+    }
+    .header-container2 .brand .submenu ul li:hover {
+        background-color: rgb(66, 128, 107);
+        color: rgb(9, 26, 34);
+        font-weight: bold;
+    }
+    .header-container2 .brand:hover .submenu {
+        display: block;
+    }
+    .header-container2 .brand li {
+        padding: 10px 15px;
+        color: rgb(22, 52, 32);
+        font-size: 14px;
+    }
+  /* index style */
   
   .biography-content {
     margin: 20vh 0 20vh 0;
@@ -31,7 +182,6 @@
     color: white
   }
 
-  /* index style */
   .biography-images-container {
     display: flex;
     justify-content: center;
