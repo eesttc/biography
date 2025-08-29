@@ -1,17 +1,20 @@
 <?php
- session_start();
- $ip = $_SERVER['REMOTE_ADDR'];
-    $user_agent = $_SERVER['HTTP_USER_AGENT'];
-    $page_url = $_SERVER['REQUEST_URI'];
-    $sql = "INSERT INTO Visits (ip_address, page_url, user_agent) VALUES ('$ip', '$page_url', '$user_agent')";
-    $conn->query($sql);
+session_start();
+$ip = $_SERVER['REMOTE_ADDR'];
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+$page_url = $_SERVER['REQUEST_URI'];
+$sql = "INSERT INTO Visits (ip_address, page_url, user_agent) VALUES ('$ip', '$page_url', '$user_agent')";
+$conn->query($sql);
 
-    $visit_count = $conn->query("SELECT COUNT(*) AS count FROM Visits")->fetch_assoc()['count'];
+$visit_count = $conn->query("SELECT COUNT(*) AS count FROM Visits")->fetch_assoc()['count'];
 
-    $person = $conn->query("SELECT * FROM Person LIMIT 1")->fetch_assoc();
-    // $person_id = $person['person_id'];
-    $person_id = (is_array($person)&& isset($person['person_id'])) ? $person['person_id'] : null;
+$person = $conn->query("SELECT * FROM Person LIMIT 1")->fetch_assoc();
 
+// Kiểm tra nếu tìm thấy person_id hợp lệ
+$person_id = (is_array($person) && isset($person['person_id'])) ? $person['person_id'] : null;
+
+// Chỉ thực hiện các truy vấn này nếu person_id tồn tại
+if ($person_id !== null) {
     $education = $conn->query("SELECT * FROM Education WHERE person_id = $person_id");
     $career = $conn->query("SELECT * FROM Career WHERE person_id = $person_id");
     $research = $conn->query("SELECT * FROM Research WHERE person_id = $person_id");
@@ -19,6 +22,17 @@
     $works = $conn->query("SELECT * FROM Works WHERE person_id = $person_id");
     $gallery = $conn->query("SELECT * FROM Gallery WHERE person_id = $person_id");
     $references = $conn->query("SELECT * FROM `References` WHERE person_id = $person_id");
+} else {
+    // Nếu không tìm thấy person_id, gán các biến bằng một kết quả rỗng
+    // để tránh các lỗi tiếp theo khi bạn sử dụng chúng
+    $education = $conn->query("SELECT * FROM Education WHERE 1=0");
+    $career = $conn->query("SELECT * FROM Career WHERE 1=0");
+    $research = $conn->query("SELECT * FROM Research WHERE 1=0");
+    $awards = $conn->query("SELECT * FROM Awards WHERE 1=0");
+    $works = $conn->query("SELECT * FROM Works WHERE 1=0");
+    $gallery = $conn->query("SELECT * FROM Gallery WHERE 1=0");
+    $references = $conn->query("SELECT * FROM `References` WHERE 1=0");
+}
 ?>
 
 <!DOCTYPE html>
@@ -53,37 +67,37 @@
         <div class="header-container2">
         <ul class="menu">
             <li class="brand">
-                <a href="../includes/Biography.php">Biography</a>
+                <a href="biography.php">Biography</a>
                     <ul class="submenu">
                         
                     </ul>
             </li>
             <li class="brand">
-                <a href="../includes/Research.php">Research</a>
+                <a href="research.php">Research</a>
                     <ul class="submenu">
 
                     </ul>
             </li>
             <li class="brand">
-                <a href="../includes/Awards.php">Awards and Honors</a>
+                <a href="awardsAndHonors.php">Awards and Honors</a>
                     <ul class="submenu">
                         
                     </ul>
             </li>
             <li class="brand">
-                <a href="../includes/Works.php">Selected Works</a>
+                <a href="selectedWorks.php">Selected Works</a>
                     <ul class="submenu">
 
                     </ul>
             </li>
             <li class="brand">
-                <a href="../includes/References.php">References</a>
+                <a href="references.php">References</a>
                     <ul class="submenu">
 
                     </ul>
             </li>
             <li class="brand">
-                <a href="../includes/Sitemap.php">Site Map</a>
+                <a href="siteMap.php">Site Map</a>
                     <ul class="submenu">
 
                     </ul>
