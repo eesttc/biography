@@ -67,7 +67,7 @@ if ($person_id !== null) {
         <div class="header-container2">
         <ul class="menu">
             <li class="brand">
-                <a href="biography.php">Biography</a>
+                <a href="../biography/includes/biography.php">Biography</a>
                     <ul class="submenu">
                         
                     </ul>
