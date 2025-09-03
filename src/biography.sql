@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th8 16, 2025 lúc 01:43 PM
--- Phiên bản máy phục vụ: 10.4.32-MariaDB
--- Phiên bản PHP: 8.0.30
+-- Host: 127.0.0.1
+-- Generation Time: Sep 03, 2025 at 03:12 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `biography`
+-- Database: `biography`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `admins`
+-- Table structure for table `admins`
 --
 
 CREATE TABLE `admins` (
@@ -41,23 +41,7 @@ CREATE TABLE `admins` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `auditlogs`
---
-
-CREATE TABLE `auditlogs` (
-  `log_id` int(11) NOT NULL,
-  `admin_id` int(11) DEFAULT NULL,
-  `action` varchar(50) NOT NULL,
-  `table_name` varchar(50) NOT NULL,
-  `record_id` int(11) DEFAULT NULL,
-  `description` text DEFAULT NULL,
-  `created_at` datetime DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `awards`
+-- Table structure for table `awards`
 --
 
 CREATE TABLE `awards` (
@@ -74,7 +58,7 @@ CREATE TABLE `awards` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `career`
+-- Table structure for table `career`
 --
 
 CREATE TABLE `career` (
@@ -93,7 +77,7 @@ CREATE TABLE `career` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `education`
+-- Table structure for table `education`
 --
 
 CREATE TABLE `education` (
@@ -112,7 +96,7 @@ CREATE TABLE `education` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `gallery`
+-- Table structure for table `gallery`
 --
 
 CREATE TABLE `gallery` (
@@ -128,7 +112,7 @@ CREATE TABLE `gallery` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `person`
+-- Table structure for table `person`
 --
 
 CREATE TABLE `person` (
@@ -144,7 +128,7 @@ CREATE TABLE `person` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `references`
+-- Table structure for table `references`
 --
 
 CREATE TABLE `references` (
@@ -161,7 +145,7 @@ CREATE TABLE `references` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `research`
+-- Table structure for table `research`
 --
 
 CREATE TABLE `research` (
@@ -178,21 +162,21 @@ CREATE TABLE `research` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `visits`
+-- Table structure for table `visits`
 --
 
 CREATE TABLE `visits` (
   `visit_id` int(11) NOT NULL,
   `visit_time` datetime DEFAULT current_timestamp(),
   `ip_address` varchar(45) DEFAULT NULL,
-  `session_id` varchar(255) NOT NULL,
-  `page_url` varchar(255) DEFAULT NULL
+  `page_url` varchar(255) DEFAULT NULL,
+  `user_agent` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `works`
+-- Table structure for table `works`
 --
 
 CREATE TABLE `works` (
@@ -208,11 +192,11 @@ CREATE TABLE `works` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `admins`
+-- Indexes for table `admins`
 --
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`admin_id`),
@@ -220,192 +204,172 @@ ALTER TABLE `admins`
   ADD UNIQUE KEY `email` (`email`);
 
 --
--- Chỉ mục cho bảng `auditlogs`
---
-ALTER TABLE `auditlogs`
-  ADD PRIMARY KEY (`log_id`),
-  ADD KEY `admin_id` (`admin_id`);
-
---
--- Chỉ mục cho bảng `awards`
+-- Indexes for table `awards`
 --
 ALTER TABLE `awards`
   ADD PRIMARY KEY (`award_id`),
   ADD KEY `person_id` (`person_id`);
 
 --
--- Chỉ mục cho bảng `career`
+-- Indexes for table `career`
 --
 ALTER TABLE `career`
   ADD PRIMARY KEY (`career_id`),
   ADD KEY `person_id` (`person_id`);
 
 --
--- Chỉ mục cho bảng `education`
+-- Indexes for table `education`
 --
 ALTER TABLE `education`
   ADD PRIMARY KEY (`education_id`),
   ADD KEY `person_id` (`person_id`);
 
 --
--- Chỉ mục cho bảng `gallery`
+-- Indexes for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD PRIMARY KEY (`image_id`),
   ADD KEY `person_id` (`person_id`);
 
 --
--- Chỉ mục cho bảng `person`
+-- Indexes for table `person`
 --
 ALTER TABLE `person`
   ADD PRIMARY KEY (`person_id`);
 
 --
--- Chỉ mục cho bảng `references`
+-- Indexes for table `references`
 --
 ALTER TABLE `references`
   ADD PRIMARY KEY (`reference_id`),
   ADD KEY `person_id` (`person_id`);
 
 --
--- Chỉ mục cho bảng `research`
+-- Indexes for table `research`
 --
 ALTER TABLE `research`
   ADD PRIMARY KEY (`research_id`),
   ADD KEY `person_id` (`person_id`);
 
 --
--- Chỉ mục cho bảng `visits`
+-- Indexes for table `visits`
 --
 ALTER TABLE `visits`
-  ADD PRIMARY KEY (`visit_id`),
-  ADD UNIQUE KEY `session_id` (`session_id`);
+  ADD PRIMARY KEY (`visit_id`);
 
 --
--- Chỉ mục cho bảng `works`
+-- Indexes for table `works`
 --
 ALTER TABLE `works`
   ADD PRIMARY KEY (`work_id`),
   ADD KEY `person_id` (`person_id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `admins`
+-- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `auditlogs`
---
-ALTER TABLE `auditlogs`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT cho bảng `awards`
+-- AUTO_INCREMENT for table `awards`
 --
 ALTER TABLE `awards`
   MODIFY `award_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `career`
+-- AUTO_INCREMENT for table `career`
 --
 ALTER TABLE `career`
   MODIFY `career_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `education`
+-- AUTO_INCREMENT for table `education`
 --
 ALTER TABLE `education`
   MODIFY `education_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `gallery`
+-- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
   MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `person`
+-- AUTO_INCREMENT for table `person`
 --
 ALTER TABLE `person`
   MODIFY `person_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `references`
+-- AUTO_INCREMENT for table `references`
 --
 ALTER TABLE `references`
   MODIFY `reference_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `research`
+-- AUTO_INCREMENT for table `research`
 --
 ALTER TABLE `research`
   MODIFY `research_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `visits`
+-- AUTO_INCREMENT for table `visits`
 --
 ALTER TABLE `visits`
   MODIFY `visit_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `works`
+-- AUTO_INCREMENT for table `works`
 --
 ALTER TABLE `works`
   MODIFY `work_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `auditlogs`
---
-ALTER TABLE `auditlogs`
-  ADD CONSTRAINT `auditlogs_ibfk_1` FOREIGN KEY (`admin_id`) REFERENCES `admins` (`admin_id`) ON DELETE SET NULL;
-
---
--- Các ràng buộc cho bảng `awards`
+-- Constraints for table `awards`
 --
 ALTER TABLE `awards`
   ADD CONSTRAINT `awards_ibfk_1` FOREIGN KEY (`person_id`) REFERENCES `person` (`person_id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `career`
+-- Constraints for table `career`
 --
 ALTER TABLE `career`
   ADD CONSTRAINT `career_ibfk_1` FOREIGN KEY (`person_id`) REFERENCES `person` (`person_id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `education`
+-- Constraints for table `education`
 --
 ALTER TABLE `education`
   ADD CONSTRAINT `education_ibfk_1` FOREIGN KEY (`person_id`) REFERENCES `person` (`person_id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `gallery`
+-- Constraints for table `gallery`
 --
 ALTER TABLE `gallery`
   ADD CONSTRAINT `gallery_ibfk_1` FOREIGN KEY (`person_id`) REFERENCES `person` (`person_id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `references`
+-- Constraints for table `references`
 --
 ALTER TABLE `references`
   ADD CONSTRAINT `references_ibfk_1` FOREIGN KEY (`person_id`) REFERENCES `person` (`person_id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `research`
+-- Constraints for table `research`
 --
 ALTER TABLE `research`
   ADD CONSTRAINT `research_ibfk_1` FOREIGN KEY (`person_id`) REFERENCES `person` (`person_id`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `works`
+-- Constraints for table `works`
 --
 ALTER TABLE `works`
   ADD CONSTRAINT `works_ibfk_1` FOREIGN KEY (`person_id`) REFERENCES `person` (`person_id`) ON DELETE CASCADE;

@@ -21,6 +21,7 @@
 
   <?php
   // Close the database connection if needed
+  require_once '../biography/includes/footer.php';
   $conn->close();
   ?>
 </body>

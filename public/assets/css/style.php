@@ -26,10 +26,10 @@
         height: auto;
     }
     .logo-header a {
-        margin-left: 20%;
+        margin: 5vh 5vh 5vh 5vh;
     }
-    .logo-header a, .logo-header a img {
-        width: 54%;
+    .logo-header a img {        
+        border-radius: 50%;
     }
     .header-container1 ul {
         display: flex;

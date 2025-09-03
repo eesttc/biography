@@ -49,8 +49,8 @@ if ($person_id !== null) {
 
         <div class="header-container1">
             <ul class="list-header1">
-                <li class="logo-header"><a href="../public/index.php">
-                    <img id="logo" src="../assets/images/Logo.jpg" alt="Marie Curie Logo">
+                <li class="logo-header"><a href="/biography/index.php">
+                    <img id="logo" src="/biography/public/assets/images/logo-header.jpg" alt="Marie Curie Logo">
                 </a></li>
                 <li>
                     <h1>Marie Curie - Pioneer of Radioactivity</h1>
@@ -67,37 +67,37 @@ if ($person_id !== null) {
         <div class="header-container2">
         <ul class="menu">
             <li class="brand">
-                <a href="../biography/includes/biography.php">Biography</a>
+                <a href="/biography/includes/biography.php">Biography</a>
                     <ul class="submenu">
                         
                     </ul>
             </li>
             <li class="brand">
-                <a href="research.php">Research</a>
+                <a href="/biography/includes/research.php">Research</a>
                     <ul class="submenu">
 
                     </ul>
             </li>
             <li class="brand">
-                <a href="awardsAndHonors.php">Awards and Honors</a>
+                <a href="/biography/includes/awardsAndHonors.php">Awards and Honors</a>
                     <ul class="submenu">
                         
                     </ul>
             </li>
             <li class="brand">
-                <a href="selectedWorks.php">Selected Works</a>
+                <a href="/biography/includes/selectedWorks.php">Selected Works</a>
                     <ul class="submenu">
 
                     </ul>
             </li>
             <li class="brand">
-                <a href="references.php">References</a>
+                <a href="/biography/includes/references.php">References</a>
                     <ul class="submenu">
 
                     </ul>
             </li>
             <li class="brand">
-                <a href="siteMap.php">Site Map</a>
+                <a href="/biography/includes/siteMap.php">Site Map</a>
                     <ul class="submenu">
 
                     </ul>
