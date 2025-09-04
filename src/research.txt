@@ -1,0 +1,88 @@
+research The Discovery of Polonium and Radium
+
+PIERRE, her husband, WAS SO INTRIGUED by Marie's work that he joined forces with her. Her research had revealed that two uranium ores, pitchblende and chalcolite, were much more radioactive than pure uranium itself.
+
+She concluded that the highly radioactive nature of these ores might be due to one or more additional, as yet undiscovered, radioactive elements. Pierre put aside his research on crystals to help expedite Marie's discovery of the possible new elements. They worked as a team, each taking on specific scientific tasks.
+
+“Neither of us could foresee that in beginning this work we were to enter the path of a new science which we should follow for all our future.”
+
+It was far from easy to track down the new radioactive elements. Pitchblende is a highly complex mineral, made of combinations of up to 30 different elements. To isolate the unknown substances, of which only tiny amounts were present, the Curies were the first to use a new method of chemical analysis. They employed various standard (but sometimes demanding) chemical procedures to separate the different substances in pitchblende. For example, a particular element might dissolve in an acid, which they could pour off, leaving other elements behind in a sludge at the bottom of the pot. After the materials were separated into different types of compounds, the Curies used radiation measurements to trace the minute amount of unknown, radioactive element among the fractions that resulted.
+Making repeated separations of the various substances in the pitchblende, Marie and Pierre used the Curie electrometer to identify the most radioactive fractions. They thus discovered that two fractions, one containing mostly bismuth and the other containing mostly barium, were strongly radioactive. In July 1898 the Curies published their conclusion: the bismuth fraction contained a new element. Chemically it acted almost exactly like bismuth, but since it was radioactive, it had to be something new. They named it "polonium" in honor of the country of Marie's birth. A second publication, in December 1898, explained their discovery in the barium fraction of another new element, which they named "radium" from the Latin word for ray. The Curies were close to reaching one of the highest goals that a scientist of the time could hope to achieve--placing new elements in the Periodic Table. While the chemical properties of the two new elements were completely dissimilar, they both had strong radioactivity.
+
+TO CONVINCE THE SCIENTIFIC COMMUNITY of the existence of polonium and radium, and to complete the identification and establish the nature of the new elements, Marie set out to isolate them from the bismuth and barium with which they were mixed. Since the Municipal School storeroom would be inadequate to the task, the Curies moved their lab to an abandoned shed across the school courtyard. The shed, formerly a medical school dissecting room, was poorly outfitted and ventilated. It was not weathertight. She succeeded in separating the radium from the barium only with tremendous difficulty -- which would become central in the romantic legend of her life. She had to treat very large quantities of pitchblende, a ton of which the Curies received as a donation from the Austrian government. (The Austrians hoped she would find a use for a mineral their mines yielded as a waste byproduct.)
+
+Luckily some help was available for the tedious labor of treating the pitchblende. They were able to collaborate with the Central Chemical Products Company, the firm that marketed Pierre's scientific instruments. Their colleague André Debierne cleverly adapted their standard lab techniques into larger-scale industrial processes. These processes isolated from the pitchblende materials with high concentrations of radium and polonium, which the Curies studied in detail in what she called the “miserable old shed.” In exchange for supplying chemical products and paying staff wages, the Central Chemical Products Company took a share of the radium salts extracted on its premises. The firm would later make a handsome profit by marketing these radium salts for medical and other uses.
+
+Despite the industrial assistance the Curies received, it took Marie over three years to isolate one tenth of a gram of pure radium chloride. For reasons that would not be fully understood until the concept of radioactive decay was developed, Marie never succeeded in isolating polonium, which has a half-life of only 138 days.
+
+
+
+
+
+research Breakthroughs in research on radioactivity
+
+The theory of radioactivity proposed by her opened new avenues in the study of atoms and the applications of radioactivity in physics and medicine.
+
+Radioactivity is the process by which an unstable atom emits radiation in the form of particles or electromagnetic waves. This occurs when an atom has too much energy or mass, leading to its decay to become more stable.
+
+Marie Curie classified radiation into three main types:
+
+Alpha Radiation (α): Consists of helium nuclei (2 protons and 2 neutrons) emitted from the atom. Alpha radiation has low penetrating power.
+Beta Radiation (β): Comprises electrons or positrons emitted when a neutron in the atom transforms into a proton or vice versa. Beta radiation has greater penetrating power than alpha radiation.
+Gamma Radiation (γ): Is high-energy electromagnetic waves that carry no mass. Gamma radiation has the highest penetrating power among alpha and beta radiation.
+
+Curie studied the process of radioactive decay, in which radioactive atoms spontaneously break down into new atoms, often resulting in the formation of other radioactive products. This process occurs through decay chains, leading to the formation of new elements.
+She developed methods for measuring radiation, including the use of devices like Geiger counters, which help determine the radiation levels of various elements.
+
+
+
+
+research Establishment of the Radium Institute
+
+Marie Curie founded the Radium Institute (Institut du Radium) in 1914 in Paris, with the aim of concentrating research on radioactivity and its applications in medicine. The Radium Institute was established to create an environment for in-depth research on radioactivity, aiming to explore and apply radioactive elements in the treatment of diseases, particularly cancer. Marie Curie assembled a team of leading scientists and doctors, including many of her students, to conduct research and experiments.
+
+The Radium Institute became a leading research center for radiation and significantly contributed to the advancement of modern medicine. Many cancer treatment methods today trace their origins back to initial research conducted at the institute. In addition to research, the Radium Institute played an educational role, training generations of scientists and doctors in the fields of radioactivity and medicine.
+
+
+
+research Succeeded in isolating radium
+
+In 1910 Curie succeeded in isolating radium; she also defined an international standard for radioactive emissions that was eventually named for her and Pierre: the curie.
+She intentionally refrained from patenting the radium-isolation process so that the scientific community could do research unhindered.
+
+
+
+
+
+
+
+research Contributions of Marie Curie in World War I
+
+Marie Curie played a significant role during World War I, particularly in the fields of medicine and relief efforts. Marie Curie developed mobile X-ray units, known as "Little Curies," to assist in diagnosing and treating wounded soldiers. These vehicles were equipped with X-ray machines and could be transported to the front lines, allowing doctors to quickly locate bullets or shrapnel in the bodies of injured soldiers. She organized training sessions for medical personnel so they could operate X-ray machines and perform diagnostic procedures. This contribution enhanced the medical care available to injured soldiers.
+
+In addition to her medical work, Marie Curie participated in various war support activities, including fundraising for the military and providing resources.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

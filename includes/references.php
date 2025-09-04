@@ -8,17 +8,49 @@
 </head>
 <body>
   <?php
-  // Include the configuration file to establish a database connection
-  require_once 'config.php';
-  
-  // Include the header file for common HTML structure
-  require_once 'header.php';
+    session_start();
+    require_once 'config.php';
+    require_once '../public/assets/css/style.php';
+    $sql = "SELECT highlight, link, description FROM ref ORDER BY reference_id ASC";
 
-  require_once '../public/assets/css/style.php';
+    $references_data = [];
+    if ($result = $conn->query($sql)) {
+        // Lấy tất cả các dòng dữ liệu vào một mảng
+        while ($row = $result->fetch_assoc()) {
+            $references_data[] = $row;
+        }
+        $result->free();
+    }
   ?>
-
-    <h1>References</h1>
-
+  <header>
+    <?php
+      require_once 'header.php';
+    ?>
+  </header>
+  <main>
+    <?php
+    // Kiểm tra xem có dữ liệu nào không
+    if (!empty($references_data)) {
+        // Lặp qua từng phần tử trong mảng
+        foreach ($references_data as $reference) {
+            // Hiển thị nội dung theo cấu trúc: <p><a>Nội dung highlight</a> Nội dung description</p>
+            echo "<p>";
+            echo "<a href='" . htmlspecialchars($reference['link']) . "'>";
+            echo htmlspecialchars($reference['highlight']);
+            echo "</a>";
+            echo " " . nl2br(htmlspecialchars($reference['description']));
+            echo "</p>";
+        }
+    } else {
+        echo "<p>No references found.</p>";
+    }
+    ?>
+  </main>
+  <footer>
+    <?php
+      require_once 'footer.php';
+    ?>
+  </footer>
   <?php
   // Close the database connection if needed
   $conn->close();

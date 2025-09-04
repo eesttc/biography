@@ -8,20 +8,24 @@
 </head>
 <body>
   <?php
-  // Include the configuration file to establish a database connection
-  require_once '../biography/includes/config.php';
-  
-  // Include the header file for common HTML structure
-  require_once '../biography/includes/header.php';
-
-  require_once '../biography/public/assets/css/style.php';
+    session_start();
+    require_once '../biography/includes/config.php';
+    require_once '../biography/public/assets/css/style.php';
   ?>
-
+  <header>    
+    <?php
+      require_once '../biography/includes/header.php';
+    ?>
+  </header>
+  <main>    
     <h1>Biography</h1>
-
+  </main>
+  <footer>
+    <?php
+      require_once '../biography/includes/footer.php';
+    ?>
+  </footer>
   <?php
-  // Close the database connection if needed
-  require_once '../biography/includes/footer.php';
   $conn->close();
   ?>
 </body>

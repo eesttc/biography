@@ -8,17 +8,23 @@
 </head>
 <body>
   <?php
-  // Include the configuration file to establish a database connection
-  require_once 'config.php';
-  
-  // Include the header file for common HTML structure
-  require_once 'header.php';
-
-  require_once '../public/assets/css/style.php';
+    session_start();
+    require_once 'config.php';
+    require_once '../public/assets/css/style.php';
   ?>
-
+  <header>
+    <?php
+      require_once 'header.php';
+    ?>
+  </header>
+  <main>
     <h1>Site map</h1>
-
+  </main>
+  <footer>
+    <?php
+      require_once 'footer.php';
+    ?>
+  </footer>
   <?php
   // Close the database connection if needed
   $conn->close();

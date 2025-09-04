@@ -9,111 +9,119 @@
 <body>
   <?php
   // Include the configuration file to establish a database connection
+  session_start();
   require_once '../biography/includes/config.php';
-  
-  // Include the header file for common HTML structure
-  require_once '../biography/includes/header.php';
 
   require_once '../biography/public/assets/css/style.php';
   ?>
+  <header>
+    <?php       
+      // Include the header file for common HTML structure
+      require_once '../biography/includes/header.php';
+    ?>
+  </header>
+  <main>
+    <div class="biography-content">
+      <h1 class="header-title-index"><a href="/biography/includes/biography.php">Life Story</a></h1>
+      <p>
 
-  <div class="biography-content">
-    <h1 class="header-title-index"><a href="../biography/includes/biography.php">Biography</a></h1>
+      </p>
+      <div class="biography-images-container">
+        <div class="index-images">
+          <a href="/biography/includes/biography.php">
+            <img src="./public/assets/images/logo-header.jpg" alt="">
+          </a>
+        </div>
+        <div class="index-images">
+          <a href="/biography/includes/biography.php">
+            <img src="./public/assets/images/logo-header.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="biography-content">
+    <h1 class="header-title-index"><a href="/biography/includes/selectedWorks.php">Roles Previously Held</a></h1>
     <p>
-
+      
     </p>
-    <div class="biography-images-container">
-      <div class="index-images">
-        <a href="../biography/includes/biography.php">
-          <img src="./public/assets/images/logo-header.jpg" alt="">
-        </a>
-      </div>
-      <div class="index-images">
-        <a href="../biography/includes/biography.php">
-          <img src="./public/assets/images/logo-header.jpg" alt="">
-        </a>
-      </div>
-    </div>
-  </div>
-  <hr>
-  <div class="biography-content">
-  <h1 class="header-title-index"><a href="../biography/includes/selectedWorks.php">Selected Works</a></h1>
-  <p>
-    
-  </p>
-    <div class="biography-images-container">
-      <div class="index-images">
-        <a href="../biography/includes/selectedWorks.php">
-          <img src="./public/assets/images/logo-header.jpg" alt="">
-        </a>
-      </div>
-      <div class="index-images">
-        <a href="../biography/includes/selectedWorks.php">
-          <img src="./public/assets/images/logo-header.jpg" alt="">
-        </a>
+      <div class="biography-images-container">
+        <div class="index-images">
+          <a href="/biography/includes/selectedWorks.php">
+            <img src="./public/assets/images/logo-header.jpg" alt="">
+          </a>
+        </div>
+        <div class="index-images">
+          <a href="/biography/includes/selectedWorks.php">
+            <img src="./public/assets/images/logo-header.jpg" alt="">
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="biography-content">
-  <h1 class="header-title-index"><a href="../biography/includes/research.php">Research</a></h1>
-  <p>
-    
-  </p>
-    <div class="biography-images-container">
-      <div class="index-images">
-        <a href="../biography/includes/research.php">
-          <img src="./public/assets/images/logo-header.jpg" alt="">
-        </a>
-      </div>
-      <div class="index-images">
-        <a href="../biography/includes/research.php">
-          <img src="./public/assets/images/logo-header.jpg" alt="">
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div class="biography-content">
-  <h1 class="header-title-index"><a href="../biography/includes/awardsAndHonors.php">Awards and Honors</a></h1>
-  <p>
-    
-  </p>
-    <div class="biography-images-container">
-      <div class="index-images">
-        <a href="../biography/includes/awardsAndHonors.php">
-          <img src="./public/assets/images/logo-header.jpg" alt="">
-        </a>
-      </div>
-      <div class="index-images">
-        <a href="../biography/includes/awardsAndHonors.php">
-          <img src="./public/assets/images/logo-header.jpg" alt="">
-        </a>
+    <div class="biography-content">
+    <h1 class="header-title-index"><a href="/biography/includes/research.php">Research Works Contributed</a></h1>
+    <p>
+      
+    </p>
+      <div class="biography-images-container">
+        <div class="index-images">
+          <a href="/biography/includes/research.php">
+            <img src="./public/assets/images/logo-header.jpg" alt="">
+          </a>
+        </div>
+        <div class="index-images">
+          <a href="/biography/includes/research.php">
+            <img src="./public/assets/images/logo-header.jpg" alt="">
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="biography-content last-content-container">
-  <h1 class="header-title-index"><a href="../biography/includes/references.php">References</a></h1>
-  <p>
-    
-  </p>
-    <div class="biography-images-container">
-      <div class="index-images">
-        <a href="../biography/includes/references.php">
-          <img src="./public/assets/images/logo-header.jpg" alt="">
-        </a>
-      </div>
-      <div class="index-images">
-        <a href="../biography/includes/references.php">
-          <img src="./public/assets/images/logo-header.jpg" alt="">
-        </a>
+    <div class="biography-content">
+    <h1 class="header-title-index"><a href="/biography/includes/awardsAndHonors.php">Awards and Achievements</a></h1>
+    <p>
+      
+    </p>
+      <div class="biography-images-container">
+        <div class="index-images">
+          <a href="/biography/includes/awardsAndHonors.php">
+            <img src="./public/assets/images/logo-header.jpg" alt="">
+          </a>
+        </div>
+        <div class="index-images">
+          <a href="/biography/includes/awardsAndHonors.php">
+            <img src="./public/assets/images/logo-header.jpg" alt="">
+          </a>
+        </div>
       </div>
     </div>
-  </div>
 
+    <div class="biography-content last-content-container">
+    <h1 class="header-title-index"><a href="/biography/includes/references.php">References</a></h1>
+    <p>
+      
+    </p>
+      <div class="biography-images-container">
+        <div class="index-images">
+          <a href="/biography/includes/references.php">
+            <img src="./public/assets/images/logo-header.jpg" alt="">
+          </a>
+        </div>
+        <div class="index-images">
+          <a href="/biography/includes/references.php">
+            <img src="./public/assets/images/logo-header.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <?php       
+      require_once '../biography/includes/footer.php';
+    ?>
+  </footer>
   <?php
-  require '../biography/includes/footer.php';
   $conn->close();
   ?>
 </body>

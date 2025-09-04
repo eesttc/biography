@@ -8,20 +8,75 @@
 </head>
 <body>
   <?php
-  // Include the configuration file to establish a database connection
-  require_once 'config.php';
-  
-  // Include the header file for common HTML structure
-  require_once 'header.php';
+    session_start();
+    require_once 'config.php'; 
+    require_once '../public/assets/css/style.php';
 
-  require_once '../public/assets/css/style.php';
+    $sql = "SELECT stage, content, img1_link, img1_alt, img1_description, img2_link, img2_alt, img2_description FROM biography ORDER BY biography_id ASC";
+
+    $biography_sections = [];
+    if ($result = $conn->query($sql)) {
+      while ($row = $result->fetch_assoc()) {
+          $biography_sections[] = $row;
+      }
+      $result->free();
+    }
   ?>
-
-    <h1>Biography</h1>
-
-  <?php
-  // Close the database connection if needed
-  $conn->close();
+  <header>
+    <?php  
+      require_once 'header.php';
+    ?>
+  </header>
+  <main>
+    <?php
+    if (!empty($biography_sections)) {
+        foreach ($biography_sections as $index => $section) {
+            ?>
+            <h1><?php echo htmlspecialchars($section['stage']); ?></h1>
+            
+            <div class="biography-section">
+                <?php
+                if (!empty($section['img1_link'])) {
+                    ?>
+                    <div class="image-container">
+                        <img src="<?php echo htmlspecialchars($section['img1_link']); ?>" alt="<?php echo htmlspecialchars($section['img1_alt']); ?>">
+                        <p class="image-caption"><?php echo htmlspecialchars($section['img1_description']); ?></p>
+                    </div>
+                    <?php
+                }
+                ?>
+                <div class="content">
+                    <p><?php echo nl2br(htmlspecialchars($section['content'])); ?></p>
+                </div>
+                <?php
+                if (!empty($section['img2_link'])) {
+                    ?>
+                    <div class="image-container-right">
+                        <img src="<?php echo htmlspecialchars($section['img2_link']); ?>" alt="<?php echo htmlspecialchars($section['img2_alt']); ?>">
+                        <p class="image-caption"><?php echo htmlspecialchars($section['img2_description']); ?></p>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
+            
+            <?php
+            if ($index < count($biography_sections) - 1) {
+                echo "<hr>";
+            }
+        }
+    } else {
+        echo "<p>No biography content found.</p>";
+    }
+    ?>
+  </main>
+  <footer>
+    <?php
+      require_once 'footer.php';
+    ?>
+  </footer>
+  <?php  
+    $conn->close();
   ?>
 </body>
 </html>

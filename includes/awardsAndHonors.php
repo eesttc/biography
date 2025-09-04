@@ -8,17 +8,52 @@
 </head>
 <body>
   <?php
-  // Include the configuration file to establish a database connection
-  require_once 'config.php';
-  
-  // Include the header file for common HTML structure
-  require_once 'header.php';
+    session_start();
+    require_once 'config.php';
+    require_once '../public/assets/css/style.php';
+    $sql = "SELECT title, description FROM achievements ORDER BY achievement_id ASC";
 
-  require_once '../public/assets/css/style.php';
+    $achievements_data = [];
+    if ($result = $conn->query($sql)) {
+        // Lấy tất cả các dòng dữ liệu vào một mảng
+        while ($row = $result->fetch_assoc()) {
+            $achievements_data[] = $row;
+        }
+        $result->free();
+    }
   ?>
+  <header>
+    <?php
+      require_once 'header.php';
+    ?>
+  </header>
+  <main>
+    <?php
+    // Kiểm tra xem có dữ liệu nào không
+    if (!empty($achievements_data)) {
+        // Lặp qua từng phần tử trong mảng
+        foreach ($achievements_data as $index => $achievement) {
+            // Hiển thị tiêu đề trong thẻ h1
+            echo "<h1>" . htmlspecialchars($achievement['title']) . "</h1>";
+            
+            // Hiển thị nội dung trong thẻ p, sử dụng nl2br() để giữ định dạng xuống dòng
+            echo "<p>" . nl2br(htmlspecialchars($achievement['description'])) . "</p>";
 
-    <h1>Awards and Honors</h1>
-
+            // Nếu không phải là đoạn cuối cùng, thêm thẻ hr
+            if ($index < count($achievements_data) - 1) {
+                echo "<hr>";
+            }
+        }
+    } else {
+        echo "<p>No awards or honors found.</p>";
+    }
+    ?>
+  </main>
+  <footer>
+    <?php
+      require_once 'footer.php';
+    ?>
+  </footer>
   <?php
   // Close the database connection if needed
   $conn->close();

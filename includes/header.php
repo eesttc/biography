@@ -1,5 +1,4 @@
 <?php
-session_start();
 $ip = $_SERVER['REMOTE_ADDR'];
 $user_agent = $_SERVER['HTTP_USER_AGENT'];
 $page_url = $_SERVER['REQUEST_URI'];
@@ -44,66 +43,64 @@ if ($person_id !== null) {
   <title>Header</title>
 </head>
 <body>
-   <header>
-        <div id="visit-count">Visits: <?php echo $visit_count; ?></div>
+    <div id="visit-count">Visits: <?php echo $visit_count; ?></div>
 
-        <div class="header-container1">
-            <ul class="list-header1">
-                <li class="logo-header"><a href="/biography/index.php">
-                    <img id="logo" src="/biography/public/assets/images/logo-header.jpg" alt="Marie Curie Logo">
-                </a></li>
-                <li>
-                    <h1>Marie Curie - Pioneer of Radioactivity</h1>
-                </li>
-                <li id="search-header" class="header-empty">
-                    <form action="../includes/search-product.php" method="GET" class="search-container">
-                        <input type="text" name="query" class="search" placeholder="Search" required>
-                        <i class="bi bi-search"></i>
-                        <button type="submit" class="search-button">Search</button>
-                    </form>
-                </li>
-            </ul>
-        </div>
-        <div class="header-container2">
-        <ul class="menu">
-            <li class="brand">
-                <a href="/biography/includes/biography.php">Biography</a>
-                    <ul class="submenu">
-                        
-                    </ul>
+    <div class="header-container1">
+        <ul class="list-header1">
+            <li class="logo-header"><a href="/biography/index.php">
+                <img id="logo" src="/biography/public/assets/images/logo-header.jpg" alt="Marie Curie Logo">
+            </a></li>
+            <li>
+                <h1>Marie Curie - Pioneer of Radioactivity</h1>
             </li>
-            <li class="brand">
-                <a href="/biography/includes/research.php">Research</a>
-                    <ul class="submenu">
-
-                    </ul>
-            </li>
-            <li class="brand">
-                <a href="/biography/includes/awardsAndHonors.php">Awards and Honors</a>
-                    <ul class="submenu">
-                        
-                    </ul>
-            </li>
-            <li class="brand">
-                <a href="/biography/includes/selectedWorks.php">Selected Works</a>
-                    <ul class="submenu">
-
-                    </ul>
-            </li>
-            <li class="brand">
-                <a href="/biography/includes/references.php">References</a>
-                    <ul class="submenu">
-
-                    </ul>
-            </li>
-            <li class="brand">
-                <a href="/biography/includes/siteMap.php">Site Map</a>
-                    <ul class="submenu">
-
-                    </ul>
+            <li id="search-header" class="header-empty">
+                <form action="../includes/search-product.php" method="GET" class="search-container">
+                    <input type="text" name="query" class="search" placeholder="Search" required>
+                    <i class="bi bi-search"></i>
+                    <button type="submit" class="search-button">Search</button>
+                </form>
             </li>
         </ul>
-        </div>
-    </header>
+    </div>
+    <div class="header-container2">
+    <ul class="menu">
+        <li class="brand">
+            <a href="/biography/includes/biography.php">Life story</a>
+                <ul class="submenu">
+                    
+                </ul>
+        </li>
+        <li class="brand">
+            <a href="/biography/includes/research.php">Research works contributed</a>
+                <ul class="submenu">
+
+                </ul>
+        </li>
+        <li class="brand">
+            <a href="/biography/includes/awardsAndHonors.php">Awards and achievements</a>
+                <ul class="submenu">
+                    
+                </ul>
+        </li>
+        <li class="brand">
+            <a href="/biography/includes/selectedWorks.php">Roles previously held</a>
+                <ul class="submenu">
+
+                </ul>
+        </li>
+        <li class="brand">
+            <a href="/biography/includes/references.php">References</a>
+                <ul class="submenu">
+
+                </ul>
+        </li>
+        <li class="brand">
+            <a href="/biography/includes/siteMap.php">Site Map</a>
+                <ul class="submenu">
+
+                </ul>
+        </li>
+    </ul>
+    </div>
 </body>
 </html>

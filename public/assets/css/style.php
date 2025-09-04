@@ -1,19 +1,17 @@
 <style>
-  /* general */
-  body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
-    font-style: italic;
-    background-image: url("./public/assets/images/background-image.jpg");
-    background-size: auto;
-  }
-  hr {
-    
-  }
-  /* header style */
-  header {      
+    /* general */
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: white;
+        font-style: italic;
+        background-image: url("/biography/public/assets/images/background-image.jpg");
+        background-size: auto;
+    }
+    /* header style */
+    header {      
+        grid-row: 1;
         background-color: #66CDAA;
         margin-bottom: 50px;
         width: auto;
@@ -26,7 +24,7 @@
         height: auto;
     }
     .logo-header a {
-        margin: 5vh 5vh 5vh 5vh;
+        margin: 5vh 5vh 5vh 2vh;
     }
     .logo-header a img {        
         border-radius: 50%;
@@ -53,7 +51,7 @@
         position: relative;
         display: flex;
 
-        width: 60%;
+        width: 80%;
     }
     .search {
         padding-left: 2.5rem;
@@ -168,46 +166,99 @@
         color: rgb(22, 52, 32);
         font-size: 14px;
     }
-  /* index style */
-  
-  .biography-content {
-    margin: 20vh 0 20vh 0;
-  }
-  .header-title-index {
-    text-align: center;
-    margin-bottom: 6vh;
-  }
-  .header-title-index a {
-    text-decoration: none;
-    color: white
-  }
+    /* main style */
+    main {
+        grid-row: 2;
+        padding: 5vh 10vh 10vh 40vh;
+    }
+    main h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin: 5vh 0 8vh 0;
+    }
+    main p {
+        text-align: justify;
+        font-size: 18px;
+        text-indent: 30px;
 
-  .biography-images-container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-  }
-  .index-images {
-    background-color: blue;
-    margin: 4vh 8vh 0vh 8vh;
-    width: 30vh;
-    height: 30vh;
-    border-radius: 20px;
-  }
-  .index-images a img {
-    height: 100%;
-    border-radius: 20px;
-  }
+    }
+    main a {
+        text-decoration: none;
+        color: burlywood;
+        font-weight: bold;
+    }
+    /* footer style */
+    footer {
+        grid-row: 3;
+        background-color: green;
+        width: auto;
+        height: 20vh;
+    }
+    /* index style */
+    
+    .biography-content {
+        margin: 20vh 0 20vh 0;
+    }
+    .header-title-index {
+        text-align: center;
+        margin-bottom: 6vh;
+    }
+    .header-title-index a {
+        text-decoration: none;
+        color: white
+    }
 
-  .last-content-container {
-    margin-bottom: 15vh;
-  }
+    .biography-images-container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .index-images {
+        background-color: blue;
+        margin: 4vh 8vh 0vh 8vh;
+        width: 30vh;
+        height: 30vh;
+        border-radius: 20px;
+    }
+    .index-images a img {
+        height: 100%;
+        border-radius: 20px;
+    }
 
-  /* footer style */
-  .footer {
-    background-color: green;
-    width: auto;
-    height: 20vh;
-  }
+    .last-content-container {
+        margin-bottom: 15vh;
+    }   
+     /* images content style  */
+     .biography-section {
+    overflow: auto; /* Quan trọng: để chứa các phần tử float bên trong */
+    }
+
+    .image-container {
+        float: left; /* Đẩy khối ảnh sang trái, cho phép nội dung bao quanh */
+        width: 250px;
+        margin: 0 20px 20px 0;
+        text-align: center;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .image-container-right {
+        float: right; /* Đẩy khối ảnh sang phải, cho phép nội dung bao quanh */
+        width: 250px;
+        margin: 0 0 20px 20px;
+        text-align: center;
+    }
+
+    .image-container-right img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+    }
 </style>
