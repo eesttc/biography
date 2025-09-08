@@ -8,6 +8,7 @@
         font-style: italic;
         background-image: url("/biography/public/assets/images/background-image.jpg");
         background-size: auto;
+        position: relative;
     }
     /* header style */
     header {      
@@ -34,72 +35,23 @@
         list-style-type: none;
         width: 100%;
         height: auto;
-        margin-right: 0%;
-        margin-left: 5%;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
     }
     .header-container1 ul li {
         margin: 0;
-    }
-    #search-header {
-        list-style: none;
-        width: 40%;
-        margin: 0px 0px 0px 0px;
-    }
-    .search-container {
-        position: relative;
-        display: flex;
-
-        width: 80%;
-    }
-    .search {
-        padding-left: 2.5rem;
-        height: 38px;
-        border: 1px solid #ced4da;
-        border-radius: 4px 0 0 4px;
-        width: 100%;
-        font-size: 16px;
-    }
-    .search-button {
-        background-color: #28a745;
-        color: white;
-        border: none;
-        height: 38px;
-        padding: 0 10px;
-        border-radius: 0 4px 4px 0;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    .search-button:hover {
-        background-color: #218838;
-    }
-    .bi-search {
-        position: absolute;
-        top: 50%;
-        left: 10px;
-        transform: translateY(-50%);
-        color: black;
-        pointer-events: none;
-    }
-    .bi-cart3 {
-        font-size: 1.5rem;
-        font-weight: bold;
-        filter: brightness(0.7);
+        text-align: left;
     }
     header .header-container1 ul li img {
         display: block;
         max-height: 100px;
         width: auto;
-        margin: 0 5px 0 20px;
+        margin: 0 50px 0 20px;
         padding: 0;
     }
-    .header-container1 li a {
-        text-decoration: none;
-        color: rgb(22, 52, 32);
-    }
-    .header-container1 li a:hover {
-        text-decoration: underline;
+    #visit-count {
+        text-align: right;
+        padding-right: 10px;
     }
 
     /* Header container 2 */
@@ -131,6 +83,10 @@
     .header-container2 ul li:hover {
         background-color: rgb(66, 128, 107);
         color: rgb(9, 26, 34);
+    }
+    .header-container2 ul li:active {
+        background-color: rgba(156, 211, 193, 1);
+        color: rgba(31, 91, 57, 1);
     }
     .header-container2 ul a {
         text-decoration: none;
@@ -170,6 +126,7 @@
     main {
         grid-row: 2;
         padding: 5vh 10vh 10vh 40vh;
+        position: relative;
     }
     main h1 {
         text-align: center;
@@ -179,7 +136,6 @@
     main p {
         text-align: justify;
         font-size: 18px;
-        text-indent: 30px;
 
     }
     main a {
@@ -188,12 +144,54 @@
         font-weight: bold;
     }
     /* footer style */
-    footer {
-        grid-row: 3;
-        background-color: green;
-        width: auto;
-        height: 20vh;
-    }
+    .footer {
+  background: cyan ;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+.footer-bio img {
+  width: 80px;
+  border-radius: 50%;
+}
+.footer-links img {
+  width: 20px;
+  border-radius: 50%;
+}
+.footer-social img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+
+
+.icon-inline-1 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.icon-inline-2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.icon-inline-3 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.footer-copy {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+  background-color: lightgreen
+  ;
+}
     /* index style */
     
     .biography-content {
@@ -229,7 +227,7 @@
     .last-content-container {
         margin-bottom: 15vh;
     }   
-     /* images content style  */
+     /* Biography  */
      .biography-section {
     overflow: auto; /* Quan trọng: để chứa các phần tử float bên trong */
     }
@@ -260,5 +258,31 @@
         height: auto;
         display: block;
         margin-bottom: 10px;
+    }
+
+    /* gallery */
+    .container-gallery {
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 15vh 0 ;
+        justify-content: center;
+        display: flex;
+    }
+    .container-gallery a div {
+        width: 180px;
+        height: 180px;
+        background-color: rgba(118, 134, 187, 0.5);
+        border-radius: 20px;
+    }
+    .gallery-images {
+        background-image: url("/biography/public/assets/images/Images.jpg");
+        background-size: cover;
+        background-position: center;
+        margin-right: 15vh;
+    }
+    .gallery-references {
+        background-image: url("/biography/public/assets/images/References.jpg");
+        background-size: cover;
+        background-position: center;
     }
 </style>

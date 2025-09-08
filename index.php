@@ -11,8 +11,24 @@
   // Include the configuration file to establish a database connection
   session_start();
   require_once '../biography/includes/config.php';
-
   require_once '../biography/public/assets/css/style.php';
+
+  $biographyData = "";
+    $selectedWorkData = "";
+    $researchData = "";
+    $refData = "";
+
+    $sql = "SELECT biography, selectedWork, research, ref FROM person LIMIT 1";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Lấy hàng dữ liệu đầu tiên
+        $row = $result->fetch_assoc();
+        $biographyData = $row['biography'];
+        $selectedWorkData = $row['selectedWork'];
+        $researchData = $row['research'];
+        $refData = $row['ref'];
+    }
   ?>
   <header>
     <?php       
@@ -22,98 +38,31 @@
   </header>
   <main>
     <div class="biography-content">
-      <h1 class="header-title-index"><a href="/biography/includes/biography.php">Life Story</a></h1>
-      <p>
-
-      </p>
-      <div class="biography-images-container">
-        <div class="index-images">
-          <a href="/biography/includes/biography.php">
-            <img src="./public/assets/images/logo-header.jpg" alt="">
-          </a>
-        </div>
-        <div class="index-images">
-          <a href="/biography/includes/biography.php">
-            <img src="./public/assets/images/logo-header.jpg" alt="">
-          </a>
-        </div>
+        <h1 class="header-title-index"><a href="/biography/includes/biography.php">Life Story</a></h1>
+        <p>
+          <?php echo nl2br(htmlspecialchars($biographyData)); ?>
+        </p>
       </div>
-    </div>
     <hr>
     <div class="biography-content">
-    <h1 class="header-title-index"><a href="/biography/includes/selectedWorks.php">Roles Previously Held</a></h1>
-    <p>
-      
-    </p>
-      <div class="biography-images-container">
-        <div class="index-images">
-          <a href="/biography/includes/selectedWorks.php">
-            <img src="./public/assets/images/logo-header.jpg" alt="">
-          </a>
-        </div>
-        <div class="index-images">
-          <a href="/biography/includes/selectedWorks.php">
-            <img src="./public/assets/images/logo-header.jpg" alt="">
-          </a>
-        </div>
-      </div>
+      <h1 class="header-title-index"><a href="/biography/includes/selectedWorks.php">Roles Previously Held</a></h1>
+      <p>
+        <?php echo nl2br(htmlspecialchars($selectedWorkData)); ?>
+      </p>
     </div>
 
     <div class="biography-content">
-    <h1 class="header-title-index"><a href="/biography/includes/research.php">Research Works Contributed</a></h1>
-    <p>
-      
-    </p>
-      <div class="biography-images-container">
-        <div class="index-images">
-          <a href="/biography/includes/research.php">
-            <img src="./public/assets/images/logo-header.jpg" alt="">
-          </a>
-        </div>
-        <div class="index-images">
-          <a href="/biography/includes/research.php">
-            <img src="./public/assets/images/logo-header.jpg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="biography-content">
-    <h1 class="header-title-index"><a href="/biography/includes/awardsAndHonors.php">Awards and Achievements</a></h1>
-    <p>
-      
-    </p>
-      <div class="biography-images-container">
-        <div class="index-images">
-          <a href="/biography/includes/awardsAndHonors.php">
-            <img src="./public/assets/images/logo-header.jpg" alt="">
-          </a>
-        </div>
-        <div class="index-images">
-          <a href="/biography/includes/awardsAndHonors.php">
-            <img src="./public/assets/images/logo-header.jpg" alt="">
-          </a>
-        </div>
-      </div>
+      <h1 class="header-title-index"><a href="/biography/includes/research.php">Research Works Contributed</a></h1>
+      <p>
+        <?php echo nl2br(htmlspecialchars($researchData)); ?>
+      </p>
     </div>
 
     <div class="biography-content last-content-container">
-    <h1 class="header-title-index"><a href="/biography/includes/references.php">References</a></h1>
-    <p>
-      
-    </p>
-      <div class="biography-images-container">
-        <div class="index-images">
-          <a href="/biography/includes/references.php">
-            <img src="./public/assets/images/logo-header.jpg" alt="">
-          </a>
-        </div>
-        <div class="index-images">
-          <a href="/biography/includes/references.php">
-            <img src="./public/assets/images/logo-header.jpg" alt="">
-          </a>
-        </div>
-      </div>
+      <h1 class="header-title-index"><a href="/biography/includes/references.php">References</a></h1>
+      <p>
+        <?php echo nl2br(htmlspecialchars($refData)); ?>
+      </p>
     </div>
   </main>
   <footer>

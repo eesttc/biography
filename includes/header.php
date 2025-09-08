@@ -47,58 +47,33 @@ if ($person_id !== null) {
 
     <div class="header-container1">
         <ul class="list-header1">
-            <li class="logo-header"><a href="/biography/index.php">
-                <img id="logo" src="/biography/public/assets/images/logo-header.jpg" alt="Marie Curie Logo">
-            </a></li>
             <li>
                 <h1>Marie Curie - Pioneer of Radioactivity</h1>
             </li>
-            <li id="search-header" class="header-empty">
-                <form action="../includes/search-product.php" method="GET" class="search-container">
-                    <input type="text" name="query" class="search" placeholder="Search" required>
-                    <i class="bi bi-search"></i>
-                    <button type="submit" class="search-button">Search</button>
-                </form>
-            </li>
+            <li class="logo-header"><a href="/biography/index.php">
+                <img id="logo" src="/biography/public/assets/images/logo-header.jpg" alt="Marie Curie Logo">
+            </a></li>
         </ul>
     </div>
     <div class="header-container2">
     <ul class="menu">
         <li class="brand">
             <a href="/biography/includes/biography.php">Life story</a>
-                <ul class="submenu">
-                    
-                </ul>
         </li>
         <li class="brand">
             <a href="/biography/includes/research.php">Research works contributed</a>
-                <ul class="submenu">
-
-                </ul>
         </li>
         <li class="brand">
             <a href="/biography/includes/awardsAndHonors.php">Awards and achievements</a>
-                <ul class="submenu">
-                    
-                </ul>
         </li>
         <li class="brand">
             <a href="/biography/includes/selectedWorks.php">Roles previously held</a>
-                <ul class="submenu">
-
-                </ul>
         </li>
         <li class="brand">
-            <a href="/biography/includes/references.php">References</a>
-                <ul class="submenu">
-
-                </ul>
+            <a href="/biography/includes/gallery.php">Gallery</a>
         </li>
         <li class="brand">
             <a href="/biography/includes/siteMap.php">Site Map</a>
-                <ul class="submenu">
-
-                </ul>
         </li>
     </ul>
     </div>
