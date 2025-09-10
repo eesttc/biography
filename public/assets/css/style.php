@@ -1,5 +1,10 @@
 <style>
     /* general */
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
     body{
         margin: 0;
         padding: 0;
@@ -285,4 +290,127 @@
         background-size: cover;
         background-position: center;
     }
+
+    /* dashboard */
+    .dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar - Thanh điều hướng */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #34495e;
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidebar-nav li a:hover,
+.sidebar-nav li a.active {
+    background-color: #34495e;
+    border-left: 5px solid #3498db;
+    color: #fff;
+}
+
+.sidebar-nav i {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+/* Main Content - Khu vực nội dung chính */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+.main-header h2 {
+    margin: 0;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    margin-right: 10px;
+}
+
+.user-info i {
+    font-size: 1.5em;
+    color: #95a5a6;
+}
+
+/* Các thẻ thông tin */
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.dashboard-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card h4 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+.dashboard-card p {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #3498db;
+}
 </style>
