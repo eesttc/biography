@@ -9,33 +9,25 @@
 <body>
   <div class="footer">
     <div class="footer-address">
-      <h3>More About Us</h3>
-      <div><a href="/biography/includes/siteMap.php">Site map</a></div>
-      <div style="margin-top: 1px;"><a href="/biography/includes/references.php">References</a></div>
-      <div style="margin-top: 1px;"> pecifically Marie Curie.</div>
+      <h3>Join us! We will discuss and collaborate on scientific projects together.</h3>
     </div>
     <div class="footer-social">
       <h3>Keep Connected</h3>
-      <a href="https://instagram.com/"><img src="instagram.png"></a>
-      <a href="https://www.facebook.com/"><img src="facebook.png"></a>
-      <a href="https://www.youtube.com/"><img src="youtube.png"></a>
-      <a href="https://www.x.com/"><img src="twitter.png"></a>
+      <a href="https://instagram.com/"><img src="/biography/public/assets/images/instagram.png"></a>
+      <a href="https://www.facebook.com/"><img src="/biography/public/assets/images/facebook.png"></a>
+      <a href="https://www.youtube.com/"><img src="/biography/public/assets/images/youtube.png"></a>
+      <a href="https://www.x.com/"><img src="/biography/public/assets/images/twitter.png"></a>
     </div>
     <div class="footer-links">
       <h3>Contact Information</h3>
       <div class="icon-text-3">
-        <img src="home-icon-silhouette.png" alt="Icon" class="icon-inline-1">
-        <span>Group name</span>
-      </div>
-      <br>
-      <div class="icon-text">
-        <img src="smartphone.png" alt="Icon" class="icon-inline-2">
-        <span>0912345678</span>
+        <img src="/biography/public/assets/images/littlecuries.png" alt="Icon" class="icon-inline-1">
+        <span>Little Curies</span>
       </div>
       <br>
       <div class="icon-text-2">
-        <img src="envelope.png" alt="Icon" class="icon-inline-3">
-        <span>khai218@gmail.com</span>
+        <img src="/biography/public/assets/images/email.png" alt="Icon" class="icon-inline-3">
+        <span>lilcuries@gmail.com</span>
       </div>
     </div>
   </div>
