@@ -7,11 +7,11 @@
 </head>
 <body>
   <?php
-    session_start();
+  session_start();
     require_once 'config.php'; 
     require_once '../public/assets/css/style.php';
   ?>
-
+  
   <div class="dashboard-container">
     <aside class="sidebar">
       <div class="sidebar-header">
@@ -20,8 +20,12 @@
       <nav class="sidebar-nav">
           <ul>
               <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-              <li><a href="#"><i class="fas fa-user-edit"></i> Quản lý Tiểu sử</a></li>
-              <li><a href="#"><i class="fas fa-cog"></i> Cài đặt</a></li>
+              <li><a href="dashboard-biography.php"><i class="fas fa-user-edit"></i> Life story</a></li>
+              <li><a href="#"><i class="fas fa-cog"></i> Research works contributed</a></li>
+              <li><a href="#"><i class="fas fa-cog"></i> Awards and achievements</a></li>
+              <li><a href="#"><i class="fas fa-cog"></i> Roles previously held</a></li>
+              <li><a href="#"><i class="fas fa-cog"></i> Gallery</a></li>
+              <li><a href="#"><i class="fas fa-cog"></i> Site map</a></li>
               <li><a href="#"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
           </ul>
         </nav>
