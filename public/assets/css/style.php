@@ -160,11 +160,11 @@
     }
     /* footer style */
     .footer {
-  background: cyan ;
+  background: #5c4141ff ;
   padding: 30px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  gap: 20px;    
 }
 .footer-bio img {
   width: 80px;
@@ -244,11 +244,11 @@
     }   
      /* Biography  */
      .biography-section {
-    overflow: auto; /* Quan trọng: để chứa các phần tử float bên trong */
+    overflow: auto; 
     }
 
     .image-container {
-        float: left; /* Đẩy khối ảnh sang trái, cho phép nội dung bao quanh */
+        float: left; 
         width: 250px;
         margin: 0 20px 20px 0;
         text-align: center;
@@ -262,7 +262,7 @@
     }
 
     .image-container-right {
-        float: right; /* Đẩy khối ảnh sang phải, cho phép nội dung bao quanh */
+        float: right;
         width: 250px;
         margin: 0 0 20px 20px;
         text-align: center;

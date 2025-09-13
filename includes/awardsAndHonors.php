@@ -27,24 +27,38 @@
       require_once 'header.php';
     ?>
   </header>
-  <main>
-    <?php
-    if (!empty($achievements_data)) {
-        foreach ($achievements_data as $index => $achievement) {
-            echo '<div class="biography-content read-background">';
-            echo "<h1>" . htmlspecialchars($achievement['title']) . "</h1>";
-            
-            echo "<p>" . nl2br(htmlspecialchars($achievement['description'])) . "</p>";
-            echo "</div>";
-            if ($index < count($achievements_data) - 1) {
-                echo "<hr>";
+  <div class="main-container">
+    <nav class="sidebar">
+          <h2>Index</h2>
+          <ul>
+            <?php
+            foreach ($achievements_data as $section) {
+            $id = strtolower(str_replace(' ', '-', $section['title']));
+            echo '<li><a href="#' . htmlspecialchars($id) . '">' . htmlspecialchars($section['title']) . '</a></li>';
             }
-        }
-    } else {
-        echo "<p>No awards or honors found.</p>";
-    }
-    ?>
-  </main>
+            ?>
+          </ul>
+      </nav>
+    <main>
+      <?php
+      if (!empty($achievements_data)) {
+          foreach ($achievements_data as $index => $achievement) {
+              $id = strtolower(str_replace(' ', '-', $achievement['title']));
+              echo '<div id="'. htmlspecialchars($id) .'" class="biography-content read-background">';
+              echo "<h1>" . htmlspecialchars($achievement['title']) . "</h1>";
+              
+              echo "<p>" . nl2br(htmlspecialchars($achievement['description'])) . "</p>";
+              echo "</div>";
+              if ($index < count($achievements_data) - 1) {
+                  echo "<hr>";
+              }
+          }
+      } else {
+          echo "<p>No awards or honors found.</p>";
+      }
+      ?>
+    </main>
+  </div>
   <footer>
     <?php
       require_once 'footer.php';

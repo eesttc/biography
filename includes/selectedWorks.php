@@ -11,7 +11,7 @@
     session_start();
     require_once 'config.php';
     require_once '../public/assets/css/style.php';
-    $sql = "SELECT title, description FROM selectedWork ORDER BY selectedWork_id ASC";
+    $sql = "SELECT title, description, img1_link, img1_alt, img1_description, img2_link, img2_alt, img2_description FROM selectedWork ORDER BY selectedWork_id ASC";
 
     $selected_works = [];
     if ($result = $conn->query($sql)) {
@@ -27,23 +27,52 @@
       require_once 'header.php';
     ?>
   </header>
-  <main>
-    <?php
-    if (!empty($selected_works)) {
-        foreach ($selected_works as $index => $work) {
-            echo "<div class='biography-content read-background'>";
-            echo "<h1>" . htmlspecialchars($work['title']) . "</h1>";
-            echo "<p>" . nl2br(htmlspecialchars($work['description'])) . "</p>";
-            echo "</div>";
-            if ($index < count($selected_works) - 1) {
-                echo "<hr>";
+  <div class="main-container">
+    <nav class="sidebar">
+            <h2>Index</h2>
+            <ul>
+              <?php
+              foreach ($selected_works as $section) {
+              $id = strtolower(str_replace(' ', '-', $section['title']));
+              echo '<li><a href="#' . htmlspecialchars($id) . '">' . htmlspecialchars($section['title']) . '</a></li>';
+              }
+              ?>
+            </ul>
+        </nav>
+    <main>
+      <?php
+      if (!empty($selected_works)) {
+          foreach ($selected_works as $index => $section) {
+              $id = strtolower(str_replace(' ', '-', $section['title']));
+              echo "<div id=". htmlspecialchars($id) ." class='biography-content read-background'>";
+              echo "<h1>" . htmlspecialchars($section['title']) . "</h1>";
+              echo '<div class="biography-section">';
+            if(!empty($section['img1_link'])){
+              echo '<div class="image-container">';
+              echo '<img src="'. htmlspecialchars($section['img1_link']) .'" alt= "'.htmlspecialchars($section['img1_alt']).'">';
+              echo '<p class="image-caption">'.htmlspecialchars($section['img1_description']).'</p>';
+              echo '</div>';
             }
-        }
-    } else {
-        echo "<p>No selected works found.</p>";
-    }
-    ?>
-  </main>
+            echo '<div class="content">';
+              echo "<p>" . nl2br(htmlspecialchars($section['description'])) . "</p>";
+              echo "</div>";
+              if(!empty($section['img2_link'])){
+                echo '<div class="image-container">';
+                echo '<img src="'. htmlspecialchars($section['img2_link']) .'" alt= "'.htmlspecialchars($section['img2_alt']).'">';
+                echo '<p class="image-caption">'.htmlspecialchars($section['img2_description']).'</p>';
+                echo '</div>';
+              }
+              echo "</div></div>";
+              if ($index < count($selected_works) - 1) {
+                  echo "<hr>";
+              }
+          }
+      } else {
+          echo "<p>No selected works found.</p>";
+      }
+      ?>
+    </main>
+  </div>
   <footer>
     <?php
       require_once 'footer.php';

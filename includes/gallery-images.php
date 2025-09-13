@@ -15,7 +15,6 @@
 
     $image_data = [];
     if ($result = $conn->query($sql)) {
-        // Lấy tất cả các dòng dữ liệu vào một mảng
         while ($row = $result->fetch_assoc()) {
             $image_data[] = $row;
         }
