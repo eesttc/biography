@@ -6,32 +6,6 @@ $sql = "INSERT INTO Visits (ip_address, page_url, user_agent) VALUES ('$ip', '$p
 $conn->query($sql);
 
 $visit_count = $conn->query("SELECT COUNT(*) AS count FROM Visits")->fetch_assoc()['count'];
-
-$person = $conn->query("SELECT * FROM Person LIMIT 1")->fetch_assoc();
-
-// Kiểm tra nếu tìm thấy person_id hợp lệ
-$person_id = (is_array($person) && isset($person['person_id'])) ? $person['person_id'] : null;
-
-// Chỉ thực hiện các truy vấn này nếu person_id tồn tại
-if ($person_id !== null) {
-    $education = $conn->query("SELECT * FROM Education WHERE person_id = $person_id");
-    $career = $conn->query("SELECT * FROM Career WHERE person_id = $person_id");
-    $research = $conn->query("SELECT * FROM Research WHERE person_id = $person_id");
-    $awards = $conn->query("SELECT * FROM Awards WHERE person_id = $person_id");
-    $works = $conn->query("SELECT * FROM Works WHERE person_id = $person_id");
-    $gallery = $conn->query("SELECT * FROM Gallery WHERE person_id = $person_id");
-    $references = $conn->query("SELECT * FROM `References` WHERE person_id = $person_id");
-} else {
-    // Nếu không tìm thấy person_id, gán các biến bằng một kết quả rỗng
-    // để tránh các lỗi tiếp theo khi bạn sử dụng chúng
-    $education = $conn->query("SELECT * FROM Education WHERE 1=0");
-    $career = $conn->query("SELECT * FROM Career WHERE 1=0");
-    $research = $conn->query("SELECT * FROM Research WHERE 1=0");
-    $awards = $conn->query("SELECT * FROM Awards WHERE 1=0");
-    $works = $conn->query("SELECT * FROM Works WHERE 1=0");
-    $gallery = $conn->query("SELECT * FROM Gallery WHERE 1=0");
-    $references = $conn->query("SELECT * FROM `References` WHERE 1=0");
-}
 ?>
 
 <!DOCTYPE html>

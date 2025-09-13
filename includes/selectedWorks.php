@@ -29,17 +29,12 @@
   </header>
   <main>
     <?php
-    // Kiểm tra xem có dữ liệu nào không
     if (!empty($selected_works)) {
-        // Lặp qua từng phần tử trong mảng
         foreach ($selected_works as $index => $work) {
-            // Hiển thị tiêu đề trong thẻ h1
+            echo "<div class='biography-content read-background'>";
             echo "<h1>" . htmlspecialchars($work['title']) . "</h1>";
-            
-            // Hiển thị nội dung trong thẻ p, sử dụng nl2br() để giữ định dạng xuống dòng
             echo "<p>" . nl2br(htmlspecialchars($work['description'])) . "</p>";
-
-            // Nếu không phải là đoạn cuối cùng, thêm thẻ hr
+            echo "</div>";
             if ($index < count($selected_works) - 1) {
                 echo "<hr>";
             }
@@ -55,7 +50,6 @@
     ?>
 </footer>
   <?php
-  // Close the database connection if needed
   $conn->close();
   ?>
 </body>

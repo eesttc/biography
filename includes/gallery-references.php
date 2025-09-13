@@ -15,7 +15,6 @@
 
     $references_data = [];
     if ($result = $conn->query($sql)) {
-        // Lấy tất cả các dòng dữ liệu vào một mảng
         while ($row = $result->fetch_assoc()) {
             $references_data[] = $row;
         }
@@ -28,23 +27,22 @@
     ?>
   </header>
   <main>
+    <div class="read-background biography-content">
     <?php
-    // Kiểm tra xem có dữ liệu nào không
-    if (!empty($references_data)) {
-        // Lặp qua từng phần tử trong mảng
-        foreach ($references_data as $reference) {
-            // Hiển thị nội dung theo cấu trúc: <p><a>Nội dung highlight</a> Nội dung description</p>
-            echo "<p>";
-            echo "<a href='" . htmlspecialchars($reference['link']) . "'>";
-            echo htmlspecialchars($reference['highlight']);
-            echo "</a>";
-            echo " " . nl2br(htmlspecialchars($reference['description']));
-            echo "</p>";
-        }
-    } else {
-        echo "<p>No references found.</p>";
-    }
-    ?>
+      if (!empty($references_data)) {
+          foreach ($references_data as $reference) {
+              echo "<p>";
+              echo "<a href='" . htmlspecialchars($reference['link']) . "'>";
+              echo htmlspecialchars($reference['highlight']);
+              echo "</a>";
+              echo " " . nl2br(htmlspecialchars($reference['description']));
+              echo "</p>";
+          }
+      } else {
+          echo "<p>No references found.</p>";
+      }
+      ?>
+    </div>
   </main>
   <footer>
     <?php
@@ -52,7 +50,6 @@
     ?>
   </footer>
   <?php
-  // Close the database connection if needed
   $conn->close();
   ?>
 </body>

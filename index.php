@@ -37,28 +37,28 @@
     ?>
   </header>
   <main>
-    <div class="biography-content">
+    <div class="biography-content read-background">
         <h1 class="header-title-index"><a href="/biography/includes/biography.php">Life Story</a></h1>
         <p>
           <?php echo nl2br(htmlspecialchars($biographyData)); ?>
         </p>
       </div>
     <hr>
-    <div class="biography-content">
+    <div class="biography-content read-background">
       <h1 class="header-title-index"><a href="/biography/includes/selectedWorks.php">Roles Previously Held</a></h1>
       <p>
         <?php echo nl2br(htmlspecialchars($selectedWorkData)); ?>
       </p>
     </div>
 
-    <div class="biography-content">
+    <div class="biography-content read-background">
       <h1 class="header-title-index"><a href="/biography/includes/research.php">Research Works Contributed</a></h1>
       <p>
         <?php echo nl2br(htmlspecialchars($researchData)); ?>
       </p>
     </div>
 
-    <div class="biography-content last-content-container">
+    <div class="biography-content last-content-container read-background">
       <h1 class="header-title-index"><a href="/biography/includes/references.php">References</a></h1>
       <p>
         <?php echo nl2br(htmlspecialchars($refData)); ?>

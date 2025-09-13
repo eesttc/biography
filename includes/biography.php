@@ -27,13 +27,27 @@
       require_once 'header.php';
     ?>
   </header>
+  <div class="main-container">
+    <nav class="sidebar">
+        <h2>Index</h2>
+        <ul>
+          <?php
+          foreach ($biography_sections as $section) {
+          // Tạo ID từ tiêu đề và làm sạch
+          $id = strtolower(str_replace(' ', '-', $section['stage']));
+          echo '<li><a href="#' . htmlspecialchars($id) . '">' . htmlspecialchars($section['stage']) . '</a></li>';
+          }
+          ?>
+        </ul>
+    </nav>
   <main>
     <?php
     if (!empty($biography_sections)) {
         foreach ($biography_sections as $index => $section) {
+            $id = strtolower(str_replace(' ', '-', $section['stage']));
             ?>
+            <div id="<?php echo htmlspecialchars($id) ?>" class="biography-content read-background">
             <h1><?php echo htmlspecialchars($section['stage']); ?></h1>
-            
             <div class="biography-section">
                 <?php
                 if (!empty($section['img1_link'])) {
@@ -59,7 +73,7 @@
                 }
                 ?>
             </div>
-            
+            </div>
             <?php
             if ($index < count($biography_sections) - 1) {
                 echo "<hr>";
@@ -70,6 +84,7 @@
     }
     ?>
   </main>
+ </div>
   <footer>
     <?php
       require_once 'footer.php';

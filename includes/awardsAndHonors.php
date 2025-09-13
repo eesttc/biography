@@ -29,17 +29,13 @@
   </header>
   <main>
     <?php
-    // Kiểm tra xem có dữ liệu nào không
     if (!empty($achievements_data)) {
-        // Lặp qua từng phần tử trong mảng
         foreach ($achievements_data as $index => $achievement) {
-            // Hiển thị tiêu đề trong thẻ h1
+            echo '<div class="biography-content read-background">';
             echo "<h1>" . htmlspecialchars($achievement['title']) . "</h1>";
             
-            // Hiển thị nội dung trong thẻ p, sử dụng nl2br() để giữ định dạng xuống dòng
             echo "<p>" . nl2br(htmlspecialchars($achievement['description'])) . "</p>";
-
-            // Nếu không phải là đoạn cuối cùng, thêm thẻ hr
+            echo "</div>";
             if ($index < count($achievements_data) - 1) {
                 echo "<hr>";
             }
@@ -55,7 +51,6 @@
     ?>
   </footer>
   <?php
-  // Close the database connection if needed
   $conn->close();
   ?>
 </body>

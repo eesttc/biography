@@ -18,7 +18,31 @@
     ?>
   </header>
   <main>
-    <h1>Site map</h1>
+    <div>
+      <img src="/biography/public/assets/images/siteMap.png" alt="">
+    </div>
+    <div class="biography-content read-background">
+      <ul>
+        <h1><a href="/biography/">Index</a></h1>
+        <li><a href="/biography/includes/biography.php">Life story</a></li>
+        <li><a href="/biography/includes/research.php">Research works contributed</a></li>
+        <li><a href="/biography/includes/awardsAndHonors.php">Awards and achievements</a></li>
+        <li><a href="/biography/includes/selectedWorks.php">Roles previously held</a></li>
+        <li>
+          <ol>
+            <a href="/biography/includes/gallery.php">Gallery</a>
+            <li><a href="/biography/includes/gallery-images.php">Images</a></li>
+            <li><a href="/biography/includes/gallery-references.php">References</a></li>
+          </ol>
+        </li>
+          <li><a href="https://www.fb.com/">Facebook</a></li>
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+          <li><a href="https://www.youtube.com/">Youtube</a></li>
+          <li><a href="https://www.x.com/">X</a></li>
+          <li><a href="mailto:lilcuries@gmail.com">lilcuries@gmail.com</a></li>
+        </li>
+      </ul>
+    </div>
   </main>
   <footer>
     <?php

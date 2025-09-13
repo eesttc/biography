@@ -28,6 +28,7 @@
         align-items: center;
         width: 100%;
         height: auto;
+        font-size: 30px;
     }
     .logo-header a {
         margin: 5vh 5vh 5vh 2vh;
@@ -80,7 +81,7 @@
         position: relative;
         font-size: 16px;
         color: rgb(22, 52, 32);
-        font-size: 19px;
+        font-size: 22px;
         margin: 3.5px;
         padding: 15px 15px;
         border-radius: 5%;
@@ -130,8 +131,10 @@
     /* main style */
     main {
         grid-row: 2;
-        padding: 5vh 10vh 10vh 40vh;
+        padding: 5vh 10vh 10vh 0vh;
         position: relative;
+    padding: 20px;
+    width: calc(100% - 250px);
     }
     main h1 {
         text-align: center;
@@ -140,13 +143,20 @@
     }
     main p {
         text-align: justify;
-        font-size: 18px;
+        font-size: 20px;
 
     }
     main a {
         text-decoration: none;
         color: burlywood;
         font-weight: bold;
+    }
+
+    .read-background {
+        background-color: #22313aff;
+        padding: 30px;
+        border-radius: 20px;
+    border-right: 3px solid #5c4141ff;
     }
     /* footer style */
     .footer {
@@ -200,7 +210,7 @@
     /* index style */
     
     .biography-content {
-        margin: 20vh 0 20vh 0;
+        margin: 0vh 0 20vh 0;
     }
     .header-title-index {
         text-align: center;
@@ -297,15 +307,17 @@
     min-height: 100vh;
 }
 
-/* Sidebar - Thanh điều hướng */
+/* dashboard Sidebar - Thanh điều hướng */
 .sidebar {
     width: 250px;
-    background-color: #2c3e50;
-    color: #ecf0f1;
+    background-color: #22313aff;
+    color: #376874ff;
     display: flex;
     flex-direction: column;
     padding: 20px 0;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    margin-bottom: 100px;
 }
 
 .sidebar-header {
@@ -345,7 +357,7 @@
     font-size: 1.2em;
 }
 
-/* Main Content - Khu vực nội dung chính */
+/* dashboard Main Content - Khu vực nội dung chính */
 .main-content {
     flex-grow: 1;
     padding: 30px;
@@ -412,5 +424,43 @@
     font-size: 2.5em;
     font-weight: 700;
     color: #3498db;
+}
+/* Style cho Sidebar */
+.main-container {
+ display: flex;
+ flex-direction: row;
+ width: 100%;
+}
+.sidebar {
+ position: sticky;
+    top: 100px;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    padding: 20px;
+    border-right: 3px solid #5c4141ff;
+    background-color: #22313aff;
+}
+
+.sidebar h2 {
+ font-size: 1.5rem;
+ margin-bottom: 15px;
+}
+
+.sidebar ul {
+ list-style-type: none;
+ padding: 0;
+}
+
+.sidebar li a {
+ display: block;
+ padding: 8px 0;
+ text-decoration: none;
+ color: #ffffffff;
+ transition: color 0.3s;
+}
+
+.sidebar li a:hover {
+ color: #007bff;
 }
 </style>
