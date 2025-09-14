@@ -33,7 +33,6 @@
         <ul>
           <?php
           foreach ($biography_sections as $section) {
-          // Tạo ID từ tiêu đề và làm sạch
           $id = strtolower(str_replace(' ', '-', $section['stage']));
           echo '<li><a href="#' . htmlspecialchars($id) . '">' . htmlspecialchars($section['stage']) . '</a></li>';
           }

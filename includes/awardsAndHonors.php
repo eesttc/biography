@@ -11,7 +11,7 @@
     session_start();
     require_once 'config.php';
     require_once '../public/assets/css/style.php';
-    $sql = "SELECT title, description FROM achievements ORDER BY achievement_id ASC";
+    $sql = "SELECT title, description, img1_link, img1_alt, img1_description, img2_link, img2_alt, img2_description FROM achievements ORDER BY achievement_id ASC";
 
     $achievements_data = [];
     if ($result = $conn->query($sql)) {
@@ -42,13 +42,27 @@
     <main>
       <?php
       if (!empty($achievements_data)) {
-          foreach ($achievements_data as $index => $achievement) {
-              $id = strtolower(str_replace(' ', '-', $achievement['title']));
+          foreach ($achievements_data as $index => $section) {
+              $id = strtolower(str_replace(' ', '-', $section['title']));
               echo '<div id="'. htmlspecialchars($id) .'" class="biography-content read-background">';
-              echo "<h1>" . htmlspecialchars($achievement['title']) . "</h1>";
-              
-              echo "<p>" . nl2br(htmlspecialchars($achievement['description'])) . "</p>";
+              echo "<h1>" . htmlspecialchars($section['title']) . "</h1>";
+              echo '<div class="biography-section">';
+            if(!empty($section['img1_link'])){
+              echo '<div class="image-container">';
+              echo '<img src="'. htmlspecialchars($section['img1_link']) .'" alt= "'.htmlspecialchars($section['img1_alt']).'">';
+              echo '<p class="image-caption">'.htmlspecialchars($section['img1_description']).'</p>';
+              echo '</div>';
+            }
+            echo '<div class="content">';
+              echo "<p>" . nl2br(htmlspecialchars($section['description'])) . "</p>";
               echo "</div>";
+              if(!empty($section['img2_link'])){
+                echo '<div class="image-container">';
+                echo '<img src="'. htmlspecialchars($section['img2_link']) .'" alt= "'.htmlspecialchars($section['img2_alt']).'">';
+                echo '<p class="image-caption">'.htmlspecialchars($section['img2_description']).'</p>';
+                echo '</div>';
+              }
+              echo "</div></div>";
               if ($index < count($achievements_data) - 1) {
                   echo "<hr>";
               }

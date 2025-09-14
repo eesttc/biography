@@ -36,35 +36,50 @@
       require_once '../biography/includes/header.php';
     ?>
   </header>
+  <div class="main-container">
+    <nav class="sidebar">
+        <h2>Index</h2>
+        <ul>
+          <?php
+          echo '<ul>';
+          echo '<li><a href="#biography">Life Story</a></li>';
+          echo '<li><a href="#selectedWork">Roles Previously Held</a></li>';
+          echo '<li><a href="#research">Research Works Contributed</a></li>';
+          echo '<li><a href="#references">References</a></li>';
+          echo '</ul>';
+          ?>
+        </ul>
+    </nav>
   <main>
     <div class="biography-content read-background">
-        <h1 class="header-title-index"><a href="/biography/includes/biography.php">Life Story</a></h1>
+        <h1 id="biography" class="header-title-index"><a href="/biography/includes/biography.php">Life Story</a></h1>
         <p>
           <?php echo nl2br(htmlspecialchars($biographyData)); ?>
         </p>
       </div>
     <hr>
     <div class="biography-content read-background">
-      <h1 class="header-title-index"><a href="/biography/includes/selectedWorks.php">Roles Previously Held</a></h1>
+      <h1 id="selectedWork" class="header-title-index"><a href="/biography/includes/selectedWorks.php">Roles Previously Held</a></h1>
       <p>
         <?php echo nl2br(htmlspecialchars($selectedWorkData)); ?>
       </p>
     </div>
 
     <div class="biography-content read-background">
-      <h1 class="header-title-index"><a href="/biography/includes/research.php">Research Works Contributed</a></h1>
+      <h1 id="research" class="header-title-index"><a href="/biography/includes/research.php">Research Works Contributed</a></h1>
       <p>
         <?php echo nl2br(htmlspecialchars($researchData)); ?>
       </p>
     </div>
 
     <div class="biography-content last-content-container read-background">
-      <h1 class="header-title-index"><a href="/biography/includes/references.php">References</a></h1>
+      <h1 id="references" class="header-title-index"><a href="/biography/includes/references.php">References</a></h1>
       <p>
         <?php echo nl2br(htmlspecialchars($refData)); ?>
       </p>
     </div>
   </main>
+  </div>
   <footer>
     <?php       
       require_once '../biography/includes/footer.php';
