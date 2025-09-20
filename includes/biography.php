@@ -37,6 +37,7 @@
           echo '<li><a href="#' . htmlspecialchars($id) . '">' . htmlspecialchars($section['stage']) . '</a></li>';
           }
           ?>
+          <li><a href="#logo">Top</a></li>
         </ul>
     </nav>
   <main>

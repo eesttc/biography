@@ -26,6 +26,13 @@
       require_once 'header.php';
     ?>
   </header>
+  <div class="main-container">
+    <nav class="sidebar">
+        <h2>Index</h2>
+        <ul>
+          <li><a href="#logo">Top</a></li>
+        </ul>
+    </nav>
   <main>
     <div class="read-background biography-content">
     <?php
@@ -44,6 +51,7 @@
       ?>
     </div>
   </main>
+  </div>
   <footer>
     <?php
       require_once 'footer.php';

@@ -1,60 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <title>Dashboard Admin</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; }
+        .container { width: 80%; margin: auto; padding: 20px; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #ccc; padding-bottom: 10px; }
+        .header h1 { margin: 0; }
+        .header .logout { text-decoration: none; color: #d9534f; font-weight: bold; }
+        .menu a { display: block; padding: 10px; margin: 5px 0; background-color: #5cb85c; color: white; text-decoration: none; border-radius: 4px; }
+        .menu a:hover { background-color: #4cae4c; }
+    </style>
 </head>
 <body>
-  <?php
-  session_start();
-    require_once 'config.php'; 
-    require_once '../public/assets/css/style.php';
-  ?>
-  
-  <div class="dashboard-container">
-    <aside class="sidebar">
-      <div class="sidebar-header">
-          <h3>Admin Dashboard</h3>
-      </div>
-      <nav class="sidebar-nav">
-          <ul>
-              <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
-              <li><a href="dashboard-biography.php"><i class="fas fa-user-edit"></i> Life story</a></li>
-              <li><a href="#"><i class="fas fa-cog"></i> Research works contributed</a></li>
-              <li><a href="#"><i class="fas fa-cog"></i> Awards and achievements</a></li>
-              <li><a href="#"><i class="fas fa-cog"></i> Roles previously held</a></li>
-              <li><a href="#"><i class="fas fa-cog"></i> Gallery</a></li>
-              <li><a href="#"><i class="fas fa-cog"></i> Site map</a></li>
-              <li><a href="#"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
-          </ul>
-        </nav>
-    </aside>
-
-    <main class="main-content">
-      <header class="main-header">
-          <h2>Dashboard</h2>
-          <div class="user-info">
-              <span>Xin chào, Admin!</span>
-              <i class="fas fa-user-circle"></i>
-          </div>
-      </header>
-
-      <section class="dashboard-content">
-        <div class="dashboard-card">
-            <h4>Tổng số Tiểu sử</h4>
-            <p>150</p>
+    <?php
+    session_start();
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        header("location: login.php");
+        exit;
+    }
+    ?>
+    <div class="container">
+        <div class="header">
+            <h1>Hi, <?php echo htmlspecialchars($_SESSION['username'] ?? 'Admin'); ?>!</h1>
+            <a href="logout.php" class="logout">Logout</a>
         </div>
-        <div class="dashboard-card">
-            <h4>Đang chờ duyệt</h4>
-            <p>5</p>
+        <div class="menu">
+            <h2>Manage Content</h2>
+            <a href="manage_biography.php">Biography</a>
+            <a href="manage_achievements.php">Achievements</a>
+            <a href="manage_research.php">Researches</a>
+            <a href="manage_selectedwork.php">Role previously held</a>
+            <a href="manage_ref.php">References</a>
+            <a href="manage_images.php">Images</a>
+            <a href="manage_person.php">Index content</a>
+            <?php if ($_SESSION['role'] == 'super_admin'): ?>
+                <a href="create_admin.php">Create admin account</a>
+            <?php endif; ?>
         </div>
-        <div class="dashboard-card">
-            <h4>Số lượng thành viên</h4>
-            <p>25</p>
-        </div>
-        </section>
-      </main>
     </div>
 </body>
 </html>

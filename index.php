@@ -48,6 +48,7 @@
           echo '<li><a href="#references">References</a></li>';
           echo '</ul>';
           ?>
+          <li><a href="#logo">Top</a></li>
         </ul>
     </nav>
   <main>

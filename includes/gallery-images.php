@@ -26,15 +26,19 @@
       require_once 'header.php';
     ?>
   </header>
+  <div class="main-container">
+    <nav class="sidebar">
+        <h2>Index</h2>
+        <ul>
+          <li><a href="#logo">Top</a></li>
+        </ul>
+    </nav>
   <main class="container mt-4">
     <div class="row">
       <img src="" alt="">
         <?php
-        // Kiểm tra xem có dữ liệu nào không
         if (!empty($image_data)) {
-            // Lặp qua từng phần tử trong mảng
             foreach ($image_data as $image) {
-                // Hiển thị nội dung theo cấu trúc Bootstrap Card
                 echo '<div class="col-lg-4 col-md-6 mb-4">';
                 echo '<div class="card h-100 shadow-sm">';
                 echo '<img src="' . htmlspecialchars($image['link']) . '" class="card-img-top" alt="' . htmlspecialchars($image['alt']) . '">';
@@ -50,13 +54,13 @@
         ?>
     </div>
   </main>
+</div>
   <footer>
     <?php
       require_once 'footer.php';
     ?>
   </footer>
   <?php
-  // Close the database connection if needed
   $conn->close();
   ?>
 </body>
